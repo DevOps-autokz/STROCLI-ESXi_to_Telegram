@@ -20,15 +20,15 @@ SSH-key-based authentication to ESXi should be setup:
 https://kb.vmware.com/s/article/1002866  
 https://kb.vmware.com/s/article/1019852
 
-Create 'encrypted_password.cred' that stores your ESXi credentials:  
+Create 'encrypted_password.cred' file that stores your ESXi credentials:  
 In PowerShell terminal enter:  
-$credential = Get-Credential  
-$credential | Export-Clixml -Path encrypted_password.cred
+`$credential = Get-Credential  
+$credential | Export-Clixml -Path encrypted_password.cred`
 
 ---
 
 **Security consideration**  
-Note: Access the host by using the vSphere Web Client, remote command-line tools (vCLI and PowerCLI), and published APIs. 
+Note from VMware site: Access the host by using the vSphere Web Client, remote command-line tools (vCLI and PowerCLI), and published APIs.  
 Do not enable remote access to the host using SSH unless special circumstances require that you enable SSH access.
 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-DFA67697-232E-4F7D-860F-96C0819570A8.html
 
