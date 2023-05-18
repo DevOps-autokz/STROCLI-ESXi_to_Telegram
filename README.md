@@ -22,8 +22,8 @@ https://kb.vmware.com/s/article/1019852
 
 Create 'encrypted_password.cred' file that stores your ESXi credentials:  
 In PowerShell terminal enter:  
-`$credential = Get-Credential  
-$credential | Export-Clixml -Path encrypted_password.cred`
+`$credential = Get-Credential`
+`$credential | Export-Clixml -Path encrypted_password.cred`
 
 ---
 
