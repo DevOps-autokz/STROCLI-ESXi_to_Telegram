@@ -14,13 +14,13 @@ $ESXi_HOST="your_ESXi_host_ip_address"
 $credential = Import-Clixml -Path encrypted_password.cred
 
 ## Connect to ESXi host:
-Connect-VIServer -Server ${ESXi_HOST}  -Credential $credential
+Connect-VIServer -Server ${ESXi_HOST} -Credential $credential
 
 ## Enable SSH on remote ESXi host:
 Get-VMHost ${ESXi_HOST} | Get-VMHostService | Where Key -EQ "TSM-SSH" | Start-VMHostService
 
 ## Gather RAID status log with strocli on remote ESXi host:
-ssh root@${ESXi_HOST} "/opt/lsi/storcli/storcli  show all  > /tmp/storcli.out"
+ssh -o StrictHostKeyChecking=no root@${ESXi_HOST} "/opt/lsi/storcli/storcli  show all  > /tmp/storcli.out"
 
 ## Copy RAID status log from ESXi host to local machine:
 scp root@${ESXi_HOST}:/tmp/storcli.out $SCRIPT_DIR
