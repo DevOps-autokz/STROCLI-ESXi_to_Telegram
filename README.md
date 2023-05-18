@@ -27,7 +27,8 @@ In PowerShell terminal enter:
 
 ---
 
-**Security consideration**  
+**Security consideration:**
+
 Note from VMware site: Access the host by using the vSphere Web Client, remote command-line tools (vCLI and PowerCLI), and published APIs.  
 Do not enable remote access to the host using SSH unless special circumstances require that you enable SSH access.
 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-DFA67697-232E-4F7D-860F-96C0819570A8.html
