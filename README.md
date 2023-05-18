@@ -4,6 +4,8 @@ Powershell script to get storcli (RAID status check) results and send it to Tele
 **storcli** is the controller utility for LSI based HBA and RAID controllers.
 Read more about it at VMware documentation site: https://kb.vmware.com/s/article/2148867
 
+---
+
 **Script's prerequisites:**
 
 SSH should be installed:  
@@ -24,7 +26,7 @@ $credential | Export-Clixml -Path encrypted_password.cred
 
 ---
 
-**Security consideration**
+**Security consideration**  
 Note: Access the host by using the vSphere Web Client, remote command-line tools (vCLI and PowerCLI), and published APIs. 
 Do not enable remote access to the host using SSH unless special circumstances require that you enable SSH access.
 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-DFA67697-232E-4F7D-860F-96C0819570A8.html
